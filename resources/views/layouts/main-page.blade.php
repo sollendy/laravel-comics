@@ -16,11 +16,9 @@
 </head>
 
 <body>
-
-    <main class="">
-        <h1>AH</h1>
-    </main>
-
+    @include('partials/header')
+    @yield('contenuto')
+    @include("partials/footer")
 </body>
 
 </html>
