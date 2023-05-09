@@ -1,1 +1,1 @@
-<h2>sono il tuo amichevole footer di quartiere</h2>
+<h2>sono il tuo amichevole futer di quartiere</h2>
