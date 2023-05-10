@@ -13,7 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+$headLinks = [
+    'personaggi',
+    'fumetti',
+    'film',
+    'tv',
+    'giochi',
+    'collezionabbili',
+    'video',
+    'fan',
+    'notizie',
+    'negozio',
+];
+Route::get('/', function () use ($headLinks){
+    return view('home', compact('headLinks'));
+});
+Route::get('/ah', function (){
     $fumetti = config("comics");
-    return view('layouts/main-page', compact($fumetti));
-})->name('home');
+    return view('home', compact("fumetti"));
+});
