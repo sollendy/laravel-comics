@@ -25,10 +25,16 @@ $headLinks = [
     'notizie',
     'negozio',
 ];
-Route::get('/', function () use ($headLinks){
-    return view('home', compact('headLinks'));
-});
-Route::get('/ah', function (){
+$shopPics = [
+    
+];
+// Route::get('/', function () use ($headLinks){
+//     return view('home', compact('headLinks'));
+// });
+//quello di sopra è obsoleto perché per mandare tutto a home posso fare tutto in una route e due route uguali a home daranno errore 
+
+Route::get('/', function () use($headLinks) {
+
     $fumetti = config("comics");
-    return view('home', compact("fumetti"));
+    return view('home', compact("fumetti", "headLinks"));
 });

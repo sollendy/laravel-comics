@@ -1,1 +1,57 @@
 @import '~bootstrap/scss/bootstrap';
+#stile-head {
+    .head-cnt {
+        padding: 5px 0 0 0;
+        // border-bottom: 1px solid blue;
+        // width: 100%;
+        nav {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 20%;
+
+            .nav-img {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                img {
+                    width: 70px;
+                }
+            }
+            
+            ul {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                li {
+                    padding: 10px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: rgb(68, 68, 68);
+                    position: relative;
+                }
+                li:hover {
+                    color: rgb(2, 130, 249);
+                    // border-bottom: 3px solid rgb(2, 130, 249);
+                }
+                li:hover::before {
+                    content: "";
+                    position: absolute;
+                    top: 192%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50%;
+                    height: 3px;
+                    background-color: rgb(2, 130, 249);
+                }
+            }
+        }
+        #jumbo-cnt {
+            height: 280px;
+            background-image: url(../images/jumbotron.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    }
+}
