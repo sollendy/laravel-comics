@@ -19,14 +19,14 @@
         </div>
         <div id="barra-celeste">
             <ul>
+                {{-- <img src="" alt="immagine test"> --}}
                 @foreach ($shopPics as $shopItem)
                 <li>
                     <div>
                         <img src="{{$shopItem["img"]}}" alt="shop-pics">
                     </div>
-                    {{-- <span>{{ oggetto.text }}</span> --}}
+                    <span>{{$shopItem["testo"]}}</span>
                 </li>
-                    
                 @endforeach
             </ul>
         </div>
