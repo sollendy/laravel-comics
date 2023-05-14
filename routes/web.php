@@ -25,16 +25,20 @@ $headLinks = [
     'notizie',
     'negozio',
 ];
+
 $shopPics = [
-    
+    [
+        "img" => "/images/buy-comics-digital-comics.png",
+    ]
 ];
 // Route::get('/', function () use ($headLinks){
 //     return view('home', compact('headLinks'));
 // });
 //quello di sopra è obsoleto perché per mandare tutto a home posso fare tutto in una route e due route uguali a home daranno errore 
 
-Route::get('/', function () use($headLinks) {
+Route::get('/', function () use($headLinks, $shopPics) {
 
     $fumetti = config("comics");
-    return view('home', compact("fumetti", "headLinks"));
+    return view('home', compact("fumetti", "headLinks", "shopPics"));
 });
+

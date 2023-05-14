@@ -7,7 +7,7 @@
             </div>
             <div id="comic-cont">
                 @foreach ($fumetti as $albo)
-                <div>
+                <div class="albi text-center text-uppercase">
                     <img src="{{$albo["thumb"]}}" alt="copertina"><br>
                     {{$albo["title"]}}
                 </div>
@@ -19,12 +19,15 @@
         </div>
         <div id="barra-celeste">
             <ul>
-                {{-- <li v-for="oggetto in oggetti">
+                @foreach ($shopPics as $shopItem)
+                <li>
                     <div>
-                        <img :src="oggetto.img" alt="shop-pics">
+                        <img src="{{$shopItem["img"]}}" alt="shop-pics">
                     </div>
-                    <span>{{ oggetto.text }}</span>
-                </li> --}}
+                    {{-- <span>{{ oggetto.text }}</span> --}}
+                </li>
+                    
+                @endforeach
             </ul>
         </div>
     </main>
