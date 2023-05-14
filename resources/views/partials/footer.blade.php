@@ -22,7 +22,7 @@
                 </ul>
             </div>
             <div id="img-foot-cnt">
-                <img src="/img/dc-logo-bg.png" alt="logo">
+                <img src="{{Vite::asset("resources/images/dc-logo-bg.png")}}" alt="logo">
             </div>
         </div>
     </section>
